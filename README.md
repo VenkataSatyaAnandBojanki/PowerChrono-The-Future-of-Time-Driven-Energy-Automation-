@@ -86,3 +86,39 @@ Here’s a visual overview of the **PowerChrono hardware setup and connections**
 
 ## 🧱 Code Structure
 
+
+- **main.c:** Core logic for initialization, RTC display, and ON/OFF control.  
+- **Interrupt Handlers:** Manage switch presses and user menu navigation.  
+- **Validation:** Ensures correctness of all input data.
+
+---
+
+## 🧪 Simulation & Testing
+
+1. Connect components according to the **pin mapping table**.  
+2. Simulate the setup in **Proteus** or test on a **breadboard**.  
+3. Verify:
+   - RTC data displays correctly on LCD.  
+   - Device responds accurately to programmed ON/OFF times.  
+   - Menu navigation and editing function properly.
+
+---
+
+## 🚧 Future Enhancements
+
+- 🌐 Integrate with **IoT dashboards** for remote monitoring.  
+- ⚙️ Add support for **multiple devices** and **load prioritization**.  
+- 📊 Include **energy consumption analytics** and reports.  
+
+---
+
+## 📜 License
+
+This project is open-source and free to use for **educational and research purposes**.  
+Developed with ❤️ to advance **smart energy automation** and **time-based power control**.
+
+---
+
+### 👨‍💻 Developed by: *[BOJANKI VENKATA SATYA ANAND]*  
+### 🏫 Project Type: Embedded Systems / Energy Automation  
+### ⚙️ Microcontroller: LPC2148 (ARM7)
