@@ -1,88 +1,90 @@
 # PowerChrono-The-Future-of-Time-Driven-Energy-Automation-
 PowerChrono is an intelligent, time-based power management system designed to  optimize energy usage in industrial environments. The project focuses on automating electrical devices and loads according to predefined time schedules, ensuring efficient energy distribution, reduced wastage, and improved operational reliability. 
-Features
-Displays real-time clock (RTC) information (date, time) on a 16x2 LCD.​
+# ⚡ PowerChrono – The Future of Time-Driven Energy Automation
 
-Allows users to set or modify RTC and device ON/OFF timings using a 4x4 matrix keypad.​
+**PowerChrono** is an intelligent, time-based power management system designed to optimize energy usage in industrial environments.  
+This project automates electrical device operation according to predefined time schedules — ensuring **efficient energy distribution**, **reduced wastage**, and **enhanced operational reliability**.
 
-Controls a device (e.g., LED or relay) according to programmed ON/OFF schedule.​
+---
 
-Includes menu-based user interaction using external interrupt and switches.​
+## 🌟 Features
 
-Input validation for correct time/date and timings to ensure reliable operation.​
+- ⏰ Displays **real-time clock (RTC)** information (date & time) on a **16x2 LCD**.  
+- 🔧 Allows users to **set or modify RTC and device ON/OFF timings** using a **4x4 matrix keypad**.  
+- 💡 Controls a **device (LED or relay)** automatically based on scheduled timings.  
+- 🧭 Provides **menu-based user interaction** using an external interrupt and switches.  
+- ✅ Ensures **input validation** for all user entries (time/date and schedule inputs).
 
-Hardware Connections
-LCD Display:
+---
 
-Data Pins: P0.0 to P0.7
+## 🧩 Hardware Connections
 
-Register Select (RS): P0.8
+| Component | Function | LPC2129 Pin(s) |
+|------------|-----------|----------------|
+| **LCD Data (D0–D7)** | Data Lines | P0.0 – P0.7 |
+| **LCD RS** | Register Select | P0.8 |
+| **LCD EN** | Enable Signal | P0.9 |
+| **4x4 Keypad** | Row & Column Inputs | P1.20 – P1.27 |
+| **Interrupt Switch / Menu Access** | Opens Edit Menu | P0.16 |
+| **Device Control Switch (On/Off Check)** | Checks Device Control | P0.10 |
 
-Enable (EN): P0.9​
+---
 
-4x4 Keypad:
+## 🧠 How It Works
 
-Connected to P1.20 to P1.27​
+### 1️⃣ Initialization
+All peripherals — LCD, Keypad, RTC, and Interrupts — are initialized in `main()`.
 
-Interrupt Switch:
+### 2️⃣ Super Loop
+- Continuously reads RTC values.  
+- Displays **real-time date and time** on the LCD.  
+- Compares the current time with programmed ON/OFF schedules to control the connected device.
 
-Connected to P0.16 (used to access menu for editing on-the-fly)​
+### 3️⃣ Device Control
+Automatically turns the device **ON** or **OFF** based on RTC time matching the saved schedule.
 
-Device Control Switch (On-Time/Off-Time Check):
+### 4️⃣ Editing Mode
+Press the **switch connected to P0.16** to enter the editing menu:
+- **EDIT RTC Info:** Modify time/date (with validation).  
+- **EDIT ON/OFF Time:** Set or update ON/OFF timings.  
+- **EXIT:** Return to normal mode.
 
-Connected to P0.10​
+### 5️⃣ Menu Navigation
+Use the **keypad** for menu selection and numeric inputs.  
+Invalid inputs trigger **retry prompts** for correction.
 
-Software Requirements
-Embedded C (Keil MDK recommended)​
+---
 
-Flash Magic for programming LPC21xx
+## 🧰 Project Diagram
 
-Proteus or any other simulation software (optional)​
+Here’s a visual overview of the **PowerChrono hardware setup and connections**.
 
-How It Works
-Initialization: LCD, keypad, RTC, and interrupt are initialized in main().​
+> 🖼️ Replace the image link below with your Proteus simulation, block diagram, or breadboard image.
 
-Super Loop: Continuously reads RTC; displays date/time on LCD.​
+![PowerChrono Project Diagram](/images/powerchrono-diagram.png)
 
-Device Control: Turns device ON/OFF based on current time compared with programmed ON/OFF time.​
+---
 
-Editing Mode: Pressing the interrupt switch (P0.16) opens a menu:
+## 🛠️ Software Requirements
 
-EDIT RTC Info: Edit time/date values (validation included)
+- **Programming Language:** Embedded C  
+- **IDE:** Keil µVision (MDK recommended)  
+- **Programmer:** Flash Magic (for LPC21xx)  
+- **Simulation (Optional):** Proteus or equivalent software  
 
-EDIT ON/OFF Time: Set new ON/OFF timings for device (validation included)
+---
 
-EXIT: Resume normal operation​
+## 🚀 Usage Instructions
 
-Navigation: Keypad is used to navigate menu and input values. Invalid entries prompt retry messages.​
+1. **Power up** the system. LCD will display the current **time and date**.  
+2. Use the **keypad** to edit:
+   - RTC time and date  
+   - ON/OFF timings  
+3. Press the **menu switch (P0.16)** anytime to enter **editing mode**.  
+4. Navigate using the keypad and input your values.  
+5. The connected device automatically follows the saved schedule.
 
-Pin Mapping               Function	LPC2129 Pin(s)
-LCD Data (D0-D7)	        P0.0 - P0.7
-LCD RS	                  P0.8
-LCD EN	                  P0.9
-Keypad Rows/Cols         	P1.20 - P1.27
-Interrupt Switch/Menu	    P0.16
-ON/OFF Time Switch	      P0.10
+---
 
-Usage Instructions
-Power up the system. The LCD shows current time and date.
+## 🧱 Code Structure
 
-Use the keypad to set/edit time, date, ON/OFF timings via the on-screen menu.
-
-Press the switch connected to P0.16 anytime to enter editing mode; use keypad to make selections.
-
-Device operation is automatically controlled by your programmed schedule.
-
-Code Structure
-Main loop for RTC display and device control.
-
-Interrupt-based menu for editing parameters.
-
-Robust input validation for all user entries.
-
-Simulation and Testing
-Test hardware connections with Proteus or on a breadboard.
-
-Confirm correct mapping of GPIO pins before flashing firmware.
-
-Validate ON/OFF control logic in response to RTC and user inputs.
