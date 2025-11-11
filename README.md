@@ -61,7 +61,7 @@ Here’s a visual overview of the **PowerChrono hardware setup and connections**
 
 Here’s a visual overview of the **PowerChrono block diagram**
 
-![PowerChrono Project Diagram](![PowerChrono Project Diagram])
+![PowerChrono Project Diagram](PHOTOS_MINI_PROJECT/PROTEUS_BLOCK.jpeg)
 ---
 
 ## 🛠️ Software Requirements
