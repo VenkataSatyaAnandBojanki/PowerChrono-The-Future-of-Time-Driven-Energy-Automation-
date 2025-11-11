@@ -1,0 +1,10 @@
+.\main.o: main.c
+.\main.o: C:\Keil\ARM\Inc\Philips\LPC214x.h
+.\main.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
+.\main.o: rtc_define.h
+.\main.o: types.h
+.\main.o: lcd.h
+.\main.o: delay.h
+.\main.o: types.h
+.\main.o: keypad.h
+.\main.o: interrput.h

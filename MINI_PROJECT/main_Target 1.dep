@@ -1,0 +1,21 @@
+Dependencies for Project 'main', Target 'Target 1': (DO NOT MODIFY !)
+F (.\Startup.s)(0x69136B17)(--cpu ARM7TDMI --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips--list .\startup.lst --xref -o .\startup.o --depend .\startup.d)
+F (.\main.c)(0x69136B17)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\main.o --omf_browse .\main.crf --depend .\main.d)
+I (C:\Keil\ARM\Inc\Philips\LPC214x.h)(0x532C1500)
+I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C7E87C)
+I (rtc_define.h)(0x69136B17)
+I (types.h)(0x69136B17)
+I (lcd.h)(0x69136B17)
+I (delay.h)(0x69136B17)
+I (keypad.h)(0x69136B17)
+I (interrput.h)(0x69136B17)
+F (.\rtc_define.h)(0x69136B17)()
+F (.\lcd.h)(0x69136B17)()
+F (.\delay.h)(0x69136B17)()
+F (.\types.h)(0x69136B17)()
+F (.\interrupt.c)(0x69136B17)(-c --cpu ARM7TDMI -D__EVAL -g -O0 --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Philips-o .\interrupt.o --omf_browse .\interrupt.crf --depend .\interrupt.d)
+I (C:\Keil\ARM\Inc\Philips\LPC21xx.h)(0x532C1500)
+I (types.h)(0x69136B17)
+I (interrput.h)(0x69136B17)
+F (.\interrput.h)(0x69136B17)()
+F (.\keypad.h)(0x69136B17)()
