@@ -57,7 +57,7 @@ Invalid inputs trigger **retry prompts** for correction.
 
 Here’s a visual overview of the **PowerChrono hardware setup and connections**.
 
-![PowerChrono Project Diagram](PHOTOS_MINI_PROJECT/PROTEUS_BLOCK.jpeg)
+![PowerChrono Project Diagram](Protues_setup/file_2025-12-08_15.58.18.png)
 
 ---
 
